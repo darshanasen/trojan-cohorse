@@ -55,7 +55,6 @@ header p {
   color: #DEFEC8;
   padding: 8px 25px;
   border-radius: 40px;
-  margin: 0 0 20px 0;
   transition: all 0.5s;
 }
 
@@ -71,5 +70,6 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px;
 }
 

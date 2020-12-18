@@ -12,20 +12,46 @@
 </head>
 
 <body>
+
   <header>
     <h1>Trojan Cohorse</h1>
     <p>✨ We are the Defecation ✨</p>
   </header>
-  <main class="wrapper maneContent">
 
+  <main class="wrapper maneContent">
     <button>Click for WOW!</button>
 
     <!-- 👇🏽 some sick content coming up here 👇🏽 -->
     <section class="hoofThereItIs">
-
     </section>
   </main>
 
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
+  <script>
+    const cohorse = {};
+
+    cohorse.randomizer = function () {
+      const randomNumber = (Math.floor(Math.random() * 35) + 1);
+
+      return randomNumber;
+    }
+
+    cohorse.yeehaw = function () {
+      $('button').on('click', function () {
+
+        const number = cohorse.randomizer();
+
+        const randomImage = `<img src="./assets/yeighs/image-${number}.png" alt="Yays and Neighs from your Friendly Neighbourhood Cohorses">`;
+
+        $('.hoofThereItIs').html(randomImage);
+      });
+    }
+
+    $(function () {
+      cohorse.yeehaw();
+    })
+  </script>
 </body>
 
 </html>
