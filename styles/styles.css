@@ -34,11 +34,25 @@ h1, p {
   margin: 0 0 20px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   text-align: center;
   padding: 20px;
   margin: 0 0 30px 0;
   min-height: 20vh;
+}
+
+header a {
+  color: #DEFEC8;
+}
+
+header a:hover,
+header a:focus {
+  border-bottom: 4px dotted #BADA55;
+  outline: none;
 }
 
 header p {
@@ -91,7 +105,6 @@ header p {
 
 .portfolio a {
   color: #FFF;
-  text-decoration: none;
   padding: 15px;
 }
 
