@@ -73,3 +73,42 @@ header p {
   padding: 40px;
 }
 
+.portfolioDisplay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 60px 0;
+}
+
+.portfolio {
+  padding: 25px;
+  border-bottom: 2px solid #DEFEC8;
+  margin: 10px;
+  width: calc(45% - 20px);
+  text-align: center;
+}
+
+.portfolio a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.portfolio a:hover,
+.portfolio a:focus {
+  border-bottom: 4px dotted #BADA55;
+  outline: none;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #DEFEC8, 0 0 30px #DEFEC8, 0 0 40px #DEFEC8, 0 0 55px #DEFEC8, 0 0 75px #DEFEC8;
+}
+
+@media (max-width: 700px) {
+  .portfolioDisplay {
+    flex-direction: column;
+  }
+
+  .portfolio {
+    width: 100%;
+  }
+}
+

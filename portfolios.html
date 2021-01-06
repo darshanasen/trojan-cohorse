@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>🔥 Cohort 30 Portfolio Point 💯</title>
+</head>
+<body>
+  <header>
+    <h1>Trojan Cohorse Portfolios</h1>
+  </header>
+
+  <!-- portfolio links to be added here -->
+  <main class="wrapper portfolioDisplay">
+  </main>
+
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
+  <script>
+
+    const cohorsePortfolios = {}; 
+
+    cohorsePortfolios.portfolioData = [
+        {
+          name: "Kyle Wong",
+          portfolioUrl: "https://kylekodes.com/"
+        },
+        {
+          name: "Quayne Brown",
+          portfolioUrl: "https://www.quayne.dev/"
+        },
+        {
+          name: "Asif Khan",
+          portfolioUrl: "https://codedkhan.com/"
+        },
+        {
+          name: "Christine Shiels",
+          portfolioUrl: "http://www.thisgrrlcodes.ca"
+        },
+        {
+          name: "Lucas Regazzi",
+          portfolioUrl: "http://regazzi.dev"
+        },
+        {
+          name: "Tenal Bourchier",
+          portfolioUrl: "https://tenalbourchier.com"
+        },
+        {
+          name: "Laura Stanley",
+          portfolioUrl: "https://lauraestanley.ca/"
+        },
+        {
+          name: "Martin Nguyen",
+          portfolioUrl: "https://www.luigicodes.com/"
+        },
+        {
+          name: "Erzhena Tsyrendashieva",
+          portfolioUrl: "http://erzhena.ca/"
+        },
+        {
+          name: "Calvin Barrett",
+          portfolioUrl: "https://calvinbarrett.ca/"
+        },
+        {
+          name: "Jonathan Lyn",
+          portfolioUrl: "https://www.joncraftscode.com/"
+        },
+        {
+          name: "Syl Aucoin",
+          portfolioUrl: "https://sylcodes.com/"
+        },
+        {
+          name: "Brittany Barnard",
+          portfolioUrl: "https://brittanybarnard.netlify.app/"
+        },
+        {
+          name: "Marielle Roberts",
+          portfolioUrl: "https://marielle-roberts.com/"
+        },
+        {
+          name: "Melissa Cappe",
+          portfolioUrl: "http://melissacappe.com/"
+        },
+        {
+          name: "Swetha Chandrasekhar",
+          portfolioUrl: "https://www.swethacodes.com/"
+        },
+        {
+          name: "Ermek Barmashev",
+          portfolioUrl: "https://ermekcodes.com/"
+        },
+        {
+          name: "Aleksandra Petryga",
+          portfolioUrl: "https://petryga.com"
+        },
+        {
+          name: "Amanda Monteiro",
+          portfolioUrl: "https://amandamonteiro.ca/"
+        },
+        {
+          name: "Barrie Wu",
+          portfolioUrl: "https://www.barriewu.com/"
+        },
+        {
+          name: "Ben Sarjeant",
+          portfolioUrl: "https://bensarjeant.com"
+        },
+        {
+          name: "Stephen Thomas",
+          portfolioUrl: "https://stevecodes.co/"
+        },
+        {
+          name: "Saeed Malakhail",
+          portfolioUrl: "http://saeedcoding.com/"
+        },
+        {
+          name: "Inga Locmele",
+          portfolioUrl: "https://www.ingalocmele.com/"
+        },
+        {
+          name: "Brandon Wong",
+          portfolioUrl: "https://builtbybrandonportfolio.netlify.app/"
+        },
+        {
+          name: "Reza Soleimani",
+          portfolioUrl: "https://www.rezasoleimani.ca/"
+        },
+        {
+          name: "Clarke MacArthur",
+          portfolioUrl: "https://clarkemacarthur.com"
+        },
+        {
+          name: "Boris Ulanowicz",
+          portfolioUrl: "https://borisweb.dev"
+        },
+        {
+          name: "Zahra Paliwalla",
+          portfolioUrl: "http://www.zahrapaliwalla.com/"
+        },
+        {
+          name: "Victor Hok",
+          portfolioUrl: "www.victorhok.com"
+        },
+        {
+          name: "Prachi Gujar",
+          portfolioUrl: "https://prachigujar.com/"
+        },
+        {
+          name: "Caitlin Klotz",
+          portfolioUrl: "https://caitlinklotz.com"
+        },
+        {
+          name: "Harry Guloien",
+          portfolioUrl: "https://www.harrydarwin.com/"
+        },
+        {
+          name: "Greg Forster",
+          portfolioUrl: "https://gregforster.ca/"
+        },
+        {
+          name: "David Ratcliffe",
+          portfolioUrl: "https://www.daveratcliffe.com"
+        },
+        {
+          name: "Hans Christian Severino",
+          portfolioUrl: "https://hans-christian.github.io/hansChristianSeverinoPortfolio/"
+        },
+        {
+          name: "Christina Yu",
+          portfolioUrl: "https://christinayu.dev/"
+        },
+      ];
+
+      cohorsePortfolios.shuffle = function() {
+
+        let portfolioArray = cohorsePortfolios.portfolioData;
+        let i = portfolioArray.length;
+        while (--i) {
+          let random = Math.floor(Math.random() * (i + 1));
+          let shuffledArray = portfolioArray[i];
+          portfolioArray[i] = portfolioArray[random];
+          portfolioArray[random] = shuffledArray;
+        }
+
+        portfolioArray.forEach(function(portfolio) {
+
+          let portfolioMarkup = `
+            <div class="portfolio">
+              <a href="${portfolio.portfolioUrl}" target="_blank" rel="noopener">${portfolio.name}</a>
+            </div>
+          `;
+          $('.portfolioDisplay').append(portfolioMarkup);
+
+        })
+
+      }
+
+      cohorsePortfolios.yeehaw = function() {
+        cohorsePortfolios.shuffle();
+      }
+
+      $(function () {
+          cohorsePortfolios.yeehaw();
+      })
+
+  </script>
+</body>
+</html>
